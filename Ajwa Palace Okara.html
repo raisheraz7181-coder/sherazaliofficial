@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://127.0.0.1:5500/index.html#contact -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ajwa Palace Okara</title>
+  <!-- Bootstrap CSS -->  
+  <link href="./Ajwa Palace Okara_files/bootstrap.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="./Ajwa Palace Okara_files/animate.min.css">
+  <style>
+    :root {
+      --primary-color: #1B2733; /* deep navy */
+      --secondary-color: #D4AF37; /* gold */
+      --accent-color: #F7F1E1; /* cream */
+      --btn-hover: #b5891d;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      background-color: var(--accent-color);
+      color: var(--primary-color);
+      margin: 0;
+      padding-top: 70px; /* navbar height */
+    }
+    /* Navbar */
+    .navbar {
+      background-color: var(--primary-color) !important;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--secondary-color) !important;
+      letter-spacing: 2.5px;
+    }
+    .navbar-nav .nav-link {
+      color: var(--accent-color) !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: var(--secondary-color) !important;
+    }
+    .btn-outline-light {
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-light:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      border-color: var(--secondary-color);
+    }
+    /* Hero Section */
+    .hero {
+       background-image: url('WhatsApp Image 2023-08-03 at 5.20.36 PM.webp');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      color: var(--accent-color);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: inset 0 0 0 1000px rgba(27, 39, 51, 0.75);
+    }
+    .hero-content {
+      max-width: 700px;
+      z-index: 2;
+     
+      
+    }
+    .hero h1 {
+      font-weight: 900;
+      font-size: 3.8rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.85);
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 35px;
+      text-shadow: 1.5px 1.5px 6px rgba(0,0,0,0.6);
+    }
+    .btn-primary {
+      background-color: var(--secondary-color);
+      border: none;
+      font-weight: 700;
+      padding: 14px 35px;
+      font-size: 1.2rem;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 5px 15px rgba(212,175,55,0.5);
+    }
+    .btn-primary:hover {
+      background-color: var(--btn-hover);
+      box-shadow: 0 8px 25px rgba(181,137,29,0.8);
+    }
+    /* Section Titles */
+    section h2 {
+      font-weight: 900;
+      font-size: 2.8rem;
+      color: var(--primary-color);
+      margin-bottom: 45px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      position: relative;
+    }
+    section h2::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 5px;
+      background: var(--secondary-color);
+      margin: 15px auto 0;
+      border-radius: 3px;
+    }
+    /* About Section */
+    #about img {
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(27, 39, 51, 0.3);
+    }
+    #about p {
+      font-size: 1.2rem;
+      line-height: 1.75;
+      color: #2c3e50;
+    }
+    /* Rooms Section */
+    #rooms {
+      padding-bottom: 100px;
+    }
+    .card {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 28px rgba(27, 39, 51, 0.15);
+      background: white;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 40px rgba(27, 39, 51, 0.3);
+    }
+    .card-img-top {
+      height: 230px;
+      object-fit: cover;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .card-title {
+      color: var(--primary-color);
+      font-weight: 800;
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+    }
+    .card-text {
+      color: #555;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+    .card p.fw-bold {
+      color: var(--secondary-color);
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .card .btn-primary {
+      background-color: var(--primary-color);
+      border: none;
+      padding: 10px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    .card .btn-primary:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+    /* Events Section */
+    #events ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      color: var(--primary-color);
+    }
+    #events ul li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 14px;
+    }
+    #events ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-weight: 800;
+      font-size: 1.5rem;
+      top: 0;
+      line-height: 1;
+    }
+    #events img {
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(27, 39, 51, 0.15);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    #events img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(27, 39, 51, 0.3);
+    }
+    #events p {
+      font-size: 1.2rem;
+      line-height: 1.75;
+      color: #2c3e50;
+    }
+    #events .btn-outline-primary {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+      font-weight: 700;
+      transition: all 0.3s ease;
+      border-radius: 50px;
+      padding: 10px 30px;
+      font-size: 1.1rem;
+    }
+    #events .btn-outline-primary:hover {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+      color: var(--primary-color);
+    }
+    /* Gallery Section */
+    #gallery .gallery-img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(27, 39, 51, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    #gallery .gallery-img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 18px 45px rgba(27, 39, 51, 0.35);
+    }
+    /* Contact Section */
+    #contact form label {
+      font-weight: 700;
+      color: var(--primary-color);
+      font-size: 1.1rem;
+    }
+    #contact form input,
+    #contact form textarea,
+    #contact form select {
+      border-radius: 15px;
+      border: 2px solid var(--primary-color);
+      padding: 14px 20px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    #contact form input:focus,
+    #contact form textarea:focus,
+    #contact form select:focus {
+      border-color: var(--secondary-color);
+      outline: none;
+    }
+    #contact form button {
+      border-radius: 50px;
+      padding: 12px 40px;
+      background-color: var(--secondary-color);
+      border: none;
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+    #contact form button:hover {
+      background-color: var(--btn-hover);
+    }
+    /* Footer */
+    footer {
+      background-color: var(--primary-color);
+      color: var(--accent-color);
+      padding: 25px 0;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+    }
+    /* Responsive */
+    @media (max-width: 767px) {
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+      section h2 {
+        font-size: 2rem;
+      }
+      #rooms .card-img-top {
+        height: 180px;
+      }
+      #gallery .gallery-img {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="http://127.0.0.1:5500/index.html#">Ajwa Palace Okara</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="color: var(--secondary-color);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="http://127.0.0.1:5500/index.html#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index.html#rooms">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index.html#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index.html#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-content animate__animated animate__fadeInDown">
+      <h1>Welcome to Ajwa Palace</h1>
+      <p>Experience Luxury and Tradition in Okara</p>
+      <a href="http://127.0.0.1:5500/index.html#rooms" class="btn btn-primary">Explore Rooms</a>
+    
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container my-5 py-5">
+    <h2>About Ajwa Palace</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="./Ajwa Palace Okara_files/3DF2A769-4405-48D5-9D43-E3063496464C.webp" alt="" style="width: 400px; height: 400px;">
+      </div>
+      <div class="col-md-6">
+        <p>
+          Ajwa Palace in Okara is a magnificent blend of traditional architecture and modern luxury, offering guests an unforgettable stay. Renowned for its hospitality, exquisite decor, and serene ambiance, it is the perfect place to experience the culture and beauty of Okara.
+        </p>
+        <p>
+          Whether visiting for leisure or events, Ajwa Palace promises comfort, elegance, and a warm welcome.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms Section -->
+  <section id="rooms" class="container my-5">
+    <h2>Our Rooms</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="./Ajwa Palace Okara_files/WhatsApp Image 2023-08-03 at 5.20.36 PM.webp" class="card-img-top" alt="Deluxe Room">
+          <div class="card-body">
+            <h5 class="card-title">Deluxe Room</h5>
+            <p class="card-text">Spacious rooms with elegant décor, king-sized beds, and modern amenities.</p>
+            <p class="fw-bold">Starting at PKR 12,000/night</p>
+            <a href="http://127.0.0.1:5500/index.html#contact" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="./Ajwa Palace Okara_files/images (1).jpeg" class="card-img-top" alt="Suite Room">
+          <div class="card-body">
+            <h5 class="card-title">Suite Room</h5>
+            <p class="card-text">Luxurious suites with separate living areas and premium services.</p>
+            <p class="fw-bold">Starting at PKR 18,000/night</p>
+            <a href="http://127.0.0.1:5500/index.html#contact" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="./Ajwa Palace Okara_files/images (2).jpeg" class="card-img-top" alt="Family Room">
+          <div class="card-body">
+            <h5 class="card-title">Family Room</h5>
+            <p class="card-text">Comfortable rooms designed for families with extra beds and amenities.</p>
+            <p class="fw-bold">Starting at PKR 15,000/night</p>
+            <a href="http://127.0.0.1:5500/index.html#contact" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="container my-5 py-5">
+    <h2>Events &amp; Conferences</h2>
+    <div class="row g-4 align-items-center">
+      <div class="col-md-6">
+        <p>
+          Ajwa Palace is the perfect venue for weddings, conferences, and private events. Our elegant halls and professional staff ensure your event is memorable and flawless.
+        </p>
+        <ul>
+          <li>Wedding Halls with Elegant Decor</li>
+          <li>Conference Rooms with Modern AV Equipment</li>
+          <li>Custom Catering Services</li>
+          <li>Professional Event Planning</li>
+        </ul>
+        <a href="http://127.0.0.1:5500/index.html#contact" class="btn btn-outline-primary mt-3">Inquire Now</a>
+      </div>
+      <div class="col-md-6">
+        <img src="./Ajwa Palace Okara_files/images (1).jpeg" alt="Events at Ajwa Palace" class="img-fluid rounded">
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="container my-5 py-5">
+    <h2>Gallery</h2>
+    <div class="row g-3">
+      <div class="col-md-4 col-6">
+        <img src="./Ajwa Palace Okara_files/images (3).jpeg" alt="Luxury Interior" class="gallery-img">
+      </div>
+      <div class="col-md-4 col-6">
+        <img src="./Ajwa Palace Okara_files/images (4).jpeg" alt="Lobby" class="gallery-img">
+      </div>
+      <div class="col-md-4 col-6">
+        <img src="./Ajwa Palace Okara_files/images (5).jpeg" alt="Swimming Pool" class="gallery-img">
+      </div>
+      <div class="col-md-4 col-6">
+        <img src="./Ajwa Palace Okara_files/1674483282616_ajwa marriage hall.jpg" alt="Dining Area" class="gallery-img">
+      </div>
+      <div class="col-md-4 col-6">
+        <img src="./Ajwa Palace Okara_files/images.jpeg" alt="Room View" class="gallery-img">
+      </div>
+      <div class="col-md-4 col-6">
+        <img src="./Ajwa Palace Okara_files/restaurant-815502_1280.jpg" alt="Restaurant" class="gallery-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container my-5 py-5">
+    <h2>Contact Us</h2>
+    <form>
+      <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your full name" required="">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required="">
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required="">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Your Message</label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..." required=""></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Ajwa Palace Okara. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="./Ajwa Palace Okara_files/bootstrap.bundle.min.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafid School Mart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, rgb(10, 3, 46) 5%, rgb(183, 0, 255) 100%);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .addto {
+            padding: 10px;
+            background-color: blueviolet;
+            color: #ccc;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 10px;
+            border: none;
+            font-size: 20px;
+        }
+        .shop-pic {
+            height: auto;
+        }
+        .shop-pic img {
+            width: 100%;
+            height: 600px;
+            border-radius: 40px;
+        }
+        .addto:hover {
+            background-color: rgb(120, 75, 163);
+            transition: 1s;
+            transform: translate(10px);
+        }
+        .hero {
+            background: url('shop-image.jpg') no-repeat center/cover;
+            height: 300px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        .owner-section {
+            text-align: center;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="images.png" alt="Logo" width="120" height="60">
+        </a>
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menu -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item li me-5"><a class="nav-link" href="#shop">Shop</a></li>
+                <li class="nav-item me-5"><a class="nav-link" href="#apply">Apply Link</a></li>
+                <li class="nav-item me-5"><a class="nav-link" href="#owner">Owner</a></li>
+                <li class="nav-item me-5"><a class="nav-link" href="#location">Location</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="text-center bg-success text-white p-3">
+    <h1>حافظ اسکول مارٹ — اسکول اور کھیل کے ضروری سامان کی مکمل دکان</h1>
+</header>
+
+<div class="hero"></div>
+
+<div class="content p-4">
+
+    <section id="shop">
+        <h2 style="color: #ccc;">Our Products</h2>
+        <div class="products">
+            <div class="product">
+                <h3 style="color: #ccc;">Sports & Fitness Gear</h3>
+                <p style="color: #ccc;">High-quality, durable Sports & Fitness Gear including Cricket Bats for practice and matches</p>
+                <p style="color: #ccc;">Price: Rs. 2,000</p>
+                <button class="addto" onclick="sendWhatsAppOrder('Cricket Bat - Wooden', '2000')">Buy Now</button>
+            </div>
+            <div class="product">
+                <h3 style="color: #ccc;">School & Apply Services</h3>
+                <p style="color: #ccc;">Explore High-Quality School Supplies, Durable Sports & Fitness Gear, and Hassle-Free Online Apply Services — All in One Place!</p>
+                <p style="color: #ccc;">Price: Rs. 1,500</p>
+                <button class="addto" onclick="sendWhatsAppOrder('School Bag - Premium', '1500')">Buy Now</button>
+            </div>
+        </div>
+        <button class="addto" onclick="sendProductList()">Full Product List</button>
+    </section>
+
+    <section id="apply" class="mt-5">
+        <h2 style="color: #ccc;">Apply for Deals</h2>
+        <a href="https://wa.me/923453330239" target="_blank" class="text-white">Click Here to Apply via WhatsApp</a>
+    </section>
+
+    <section class="daily-deals mt-5">
+        <div class="container-fluid shop-pic">
+            <h2 class="text-white">Daily Deals</h2>
+            <img src="unnamed.jpg" alt="Deal of the Day">
+        </div>
+    </section>
+
+    <section id="owner" class="owner-section">
+        <h2 style="color: #ccc;">About the Owner</h2>
+        <img src="WhatsApp Image 2025-08-05 at 21.36.19_a84cf72d.jpg" alt="Owner" width="500" height="500">
+        <p style="color: #ccc;">Owner Name: Hafid Usman Fareed</p>
+        <p style="color: #ccc;">Contact: 0345-3330239</p>
+    </section>
+
+    <section id="location">
+        <h2 style="color: #ccc;">Our Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3421.3951331427725!2d73.3266082!3d30.9594537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922990012b233b7%3A0x62134aa69eabb1a9!2sHafiz%20School%20Mart%20and%20Online%20apply%20centre!5e0!3m2!1sen!2s!4v1754453792097!5m2!1sen!2s" loading="lazy"></iframe>
+    </section>
+
+    <section>
+        <h2 style="color: #ccc;">Payment Methods</h2>
+        <p style="color: #ccc;"><i class="fas fa-wallet"></i> Pay with EasyPaisa</p>
+    </section>
+
+</div>
+
+<footer class="bg-dark text-center p-3">
+    <p style="color: #ccc;">&copy; 2025 Hafid School Mart. All rights reserved.</p>
+</footer>
+
+<script>
+function sendWhatsAppOrder(productName, price) {
+    var message = "I want to buy " + productName + " for Rs. " + price;
+    var phoneNumber = "923453330239";
+    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+    window.open(url, '_blank');
+}
+
+function sendProductList() {
+    var message = "Assalam o Alaikum! Hafid School Mart ki Products List:%0A%0A" +
+                  "\ud83d\udcda SCHOOL ITEMS:%0A" +
+                  "1. School Bag (Waterproof) - Rs. 1,500%0A" +
+                  "2. Geometry Box - Rs. 500%0A" +
+                  "3. Water Bottle (Steel) - Rs. 300%0A" +
+                  "4. Lunch Box (Insulated) - Rs. 700%0A" +
+                  "5. Drawing Colors (12 Shades) - Rs. 400%0A" +
+                  "6. Notebooks Bundle (10 pieces) - Rs. 1,200%0A%0A" +
+                  "\ud83c\udfcf SPORTS / GAMES ITEMS:%0A" +
+                  "7. Cricket Bat - Rs. 2,000%0A" +
+                  "8. Football Size 5 - Rs. 2,000%0A" +
+                  "9. Badminton Racket (Pair) - Rs. 2,500%0A" +
+                  "10. Tennis Ball (6 pieces) - Rs. 600%0A" +
+                  "11. Skipping Rope - Rs. 300%0A" +
+                  "12. Carrom Board (Large) - Rs. 3,500%0A" +
+                  "13. Chess Board (Magnetic) - Rs. 1,000%0A%0A" +
+                  "\ud83d\udcc4 ONLINE APPLY SERVICES:%0A" +
+                  "Agar aap kisi School/College/University Admission, Government Job Apply ya Scholarship k liye Online Apply karwana chahte hain to niche likhein:%0A" +
+                  "Apply Karwana Hai: _______%0A%0A" +
+                  "Order Details likhein:%0A" +
+                  "Product Name: _______%0A" +
+                  "Quantity: _______%0A" +
+                  "Name: _______%0A" +
+                  "Contact Number: _______%0A" +
+                  "Address: _______%0A";
+
+    var phoneNumber = "923453330239";
+    var url = "https://wa.me/" + phoneNumber + "?text=" + message;
+    window.open(url, '_blank');
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
